@@ -76,6 +76,8 @@ def test_label_holidays():
         ],
         schema=StructType(fields),
     )
+
+    result.show()
     assert_frames_functionally_equivalent(result, expected, False)
 
     # Notes: this test highlights well that tests are a form of up-to-date documentation.
